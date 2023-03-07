@@ -1,11 +1,31 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
 
 function App() {
     return (
-        <div className="App">
-            <h2 className="text-black font-semibold text-3xl text-center mt-4"> 3D Developer Portfolio </h2>
-        </div>
+        <BrowserRouter>
+            <div className='relative z-0 bg-primary'>
+                <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center min-h-screen'>
+                    <Navbar />
+                    <Hero />
+                </div>
+                {/*  */}
+                <About />
+                <Experience />
+                <Tech />
+                <Works />
+                <Feedbacks />
+                {/*  */}
+                <div className='relative z-0'>
+                    <Contact />
+                    <StarsCanvas />
+                </div>
+            </div>
+        </BrowserRouter>
     )
 }
 
 export default App
+
+
