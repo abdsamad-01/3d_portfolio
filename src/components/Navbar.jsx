@@ -7,6 +7,7 @@ import { logo, menu, close } from '../assets'
 
 const Navbar = () => {
     const [active, setActive] = useState('');
+
     return (
         <nav
             className={`
@@ -29,7 +30,7 @@ const Navbar = () => {
                 <ul className='list-none hidden sm:flex flex-row gap-10'>
                     {navLinks.map(link => (
                         <li 
-                            className={`pb-1 ${active == link && 'text-red-200'} ${active == link && 'border-b-2 border-red-300'} ${active == link && 'font-semibold'}`}
+                            className={`pb-1 ${active == link && 'text-red-200'} ${active == link && 'border-b-2 border-red-300'}`}
                             onClick={() => setActive(link)}
                             key={link.id}>
                             <a href={`#${link.id}`}> {link.title} </a>
