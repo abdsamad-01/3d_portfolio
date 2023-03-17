@@ -14,6 +14,10 @@
   color-scheme: dark;
 }
 
+.hero-text {
+    font-family: 'Poppins';
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
